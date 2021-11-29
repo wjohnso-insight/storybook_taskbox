@@ -17,7 +17,7 @@ const Task = ( { task : { id, title, state}, onArchiveTask, onPinTask }) => {
 				<input type="text" value={title} readOnly={true} placeholder="Input title" />
 			</div>
 
-			<div className="actions" onCLick={event => event.stopPropagation()}>
+			<div className="actions" onClick={event => event.stopPropagation()}>
 				{state !== 'TASK_ARCHIVED' && (
 					//eslint-disable-next-line jsx-a11y/anchor-is-valid
 					<a onClick={() => onPinTask(id)}>
